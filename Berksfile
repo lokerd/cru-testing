@@ -1,5 +1,5 @@
-site :opscode
-#source "https://api.berkshelf.com"
+source "https://api.berkshelf.com"
+#site :opscode
 metadata
 
 cookbook  "mongodb"
