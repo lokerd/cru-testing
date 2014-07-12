@@ -1,0 +1,4 @@
+<% (['development', 'staging', 'production'] + [@environment]).uniq.each do |env| -%>
+<%= env %>: <%= @redis[:host] || 'redis' %>:6379
+<% end -%>
+

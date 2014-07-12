@@ -1,0 +1,7 @@
+<% (['development', 'staging', 'production'] + [@environment]).uniq.each do |env| -%>
+<%= env %>:
+<% @s3.each do |key, value| %>
+  <%= key %>: <%= value.inspect %>
+<% end -%>
+<% end -%>
+

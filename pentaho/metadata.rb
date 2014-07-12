@@ -1,0 +1,6 @@
+name             'pentaho'
+maintainer       'cesar torres'
+maintainer_email 'cesar.torres@cru.org'
+license          'All rights reserved'
+description      'Installs/Configures pentaho'
+version          '1.0'
