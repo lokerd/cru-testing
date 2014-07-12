@@ -33,7 +33,7 @@ user node['errbit']['user'] do
   gid node['errbit']['group']
   shell "/bin/bash"
   home "/home/#{node['errbit']['user']}"
-  password node['errbit']['password']
+#  password node['errbit']['password']
   supports :manage_home => true
   system true
 end
@@ -142,6 +142,11 @@ deploy_revision node['errbit']['deploy_to'] do
   enable_submodules false
   migrate false
   before_migrate do
+    directory "#{release_path}/vendor" do
+     mode 00755
+     action :create
+     recursive true
+    end
     link "#{release_path}/vendor/bundle" do
       to "#{node['errbit']['deploy_to']}/shared/vendor_bundle"
     end
