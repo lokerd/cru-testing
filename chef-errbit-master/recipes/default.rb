@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-include_recipe 'errbit::setup'
+include_recipe 'chef-errbit-master::setup'
 server = node['errbit']['server']
 
-include_recipe "errbit::#{server}"
+include_recipe "chef-errbit-master::#{server}"

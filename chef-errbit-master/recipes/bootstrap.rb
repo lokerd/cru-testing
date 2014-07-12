@@ -14,7 +14,7 @@ end
 ruby_block "remove_bootstrap" do
   block do
     Chef::Log.info("Database seed/bootstrap completed, removing the destructive recipe[errbit::bootstrap]")
-    node.run_list.remove("recipe[errbit::bootstrap]") if node.run_list.include?("recipe[errbit::bootstrap]")
+    node.run_list.remove("recipe[chef-errbit-master::bootstrap]") if node.run_list.include?("recipe[chef-errbit-master::bootstrap]")
   end
   action :nothing
 end
