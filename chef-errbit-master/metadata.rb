@@ -1,4 +1,4 @@
-name             "errbit"
+name             "chef-errbit-master"
 maintainer       "Sachin Sagar Rai"
 maintainer_email "millisami@gmail.com"
 license          "All rights reserved"
